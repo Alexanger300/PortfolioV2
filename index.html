@@ -41,13 +41,13 @@
       <section id="projets" class="section projects">
         <h2>Mes Projets</h2>
         <div class="project-grid">
-          <article class="project-card div1">
+          <article class="project-card div1" data-project="red" tabindex="0" role="button" aria-label="Voir les informations du projet RED">
             <img src="assets/project1.png" alt="Projet 1" class="project-image" id="1" />
           </article>
-          <article class="project-card div3">
+          <article class="project-card div3" data-project="calysta" tabindex="0" role="button" aria-label="Voir les informations du projet Calysta">
             <img src="assets/project2.png" alt="Projet 2" class="project-image" id="2" />
           </article>
-          <article class="project-card div4">
+          <article class="project-card div4" data-project="groupie-tracker" tabindex="0" role="button" aria-label="Voir les informations du projet Groupie Tracker">
             <img src="assets/project3.png" alt="Projet 3" class="project-image" id="3" />
           </article>
         </div>
@@ -71,6 +71,8 @@
         <h2>Formation</h2>
         <p class="section-text">
           Bac Général, Lycée Simone Veil - 2024-2025
+        </p>
+        <p class="section-text">
           Bachelor Informatique, Val d'Europe Ynov Campus - 2025-2026
         </p>
       </section>
@@ -80,9 +82,22 @@
         <div class="contact-actions">
     <a class="linkedin" href="https://www.linkedin.com/in/alexandre-fatoux-della-posta/">Linkedin</a>
     <a class="github" href="https://www.github.com/alexandrefatouxdellaposta/">Github</a>
-    <a class="mail" href="mailto:alexandrefatouxdellaposta@gmail.com">alexandrefatouxdellaposta@gmail.com</a>
-</div>
+    <a class="mail">alexandrefatouxdellaposta@gmail.com</a>
+        </div>
       </section>
     </main>
+    <section id="popup" class="popup" aria-hidden="true">
+      <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+        <button id="close-btn" class="close-btn" type="button" aria-label="Fermer le popup">&times;</button>
+        <div class="popup-body">
+          <h3 id="popup-title"></h3>
+          <p id="popup-description"></p>
+          <p id="popup-technologies"></p>
+          <p id="popup-learned"></p>
+          <a id="popup-link" class="popup-link" href="#" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+        </div>
+      </div>
+    </section>
+    <script src="project.js"></script>
   </body>
 </html>

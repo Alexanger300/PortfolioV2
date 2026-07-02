@@ -167,6 +167,78 @@ a {
   border-radius: inherit;
 }
 
+.project-card {
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.popup.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  position: relative;
+  width: min(100%, 720px);
+  background: var(--white);
+  color: var(--text);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+}
+
+.popup.open .popup-content {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.popup-body h3 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.popup-body p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.popup-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--white);
+}
+
+body.popup-open {
+  overflow: hidden;
+}
 
 .competences {
   scroll-margin-top: 300px;
