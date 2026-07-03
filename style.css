@@ -82,6 +82,10 @@ a {
   margin: 0;
 }
 
+.hero-copy {
+  max-width: 44rem;
+}
+
 .hero-visual {
   display: flex;
   justify-content: center;
@@ -90,6 +94,7 @@ a {
 .photo {
   border: 1px solid var(--accent);
   width: min(100%, 482px);
+  max-width: 100%;
   aspect-ratio: 482 / 537;
   display: flex;
   align-items: center;
@@ -120,31 +125,14 @@ a {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.project-grid .div1,
-.project-grid .div3,
-.project-grid .div4 {
-  grid-row: span 2 / span 2;
-}
-
-.project-grid .div1 {
-  grid-column: span 2 / span 2;
-  grid-column-start: 2;
-}
-
-.project-grid .div3 {
-  grid-column: span 2 / span 2;
-  grid-column-start: 5;
-}
-
-.project-grid .div4 {
-  grid-column: span 2 / span 2;
-  grid-column-start: 8;
+.project-grid .project-card {
+  min-height: 0;
 }
 
 .project-card {
@@ -232,7 +220,7 @@ a {
   margin-top: 0.5rem;
   padding: 0.75rem 1rem;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--dark);
   color: var(--white);
 }
 
@@ -244,44 +232,19 @@ body.popup-open {
   scroll-margin-top: 300px;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 4px;
-}
-    
-.div1 {
-    grid-column: span 3 / span 3;
+.competences .parent {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.div2 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 5;
-}
-
-.div3 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 1;
-    grid-row-start: 3;
-}
-
-.div4 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 9;
-    grid-row-start: 3;
-}
-
-.div5 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 3;
-}
-
-.div6 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 9;
-    grid-row-start: 1;
+.competences .div1,
+.competences .div2,
+.competences .div3,
+.competences .div4,
+.competences .div5,
+.competences .div6 {
+  grid-column: span 1;
 }
 
 .competences .div1,
@@ -321,25 +284,20 @@ body.popup-open {
 
 
 .contact-actions {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-}
-    
-.linkedin {
-    grid-row-start: 2;
-}
-
-.github {
-    grid-column-start: 3;
-    grid-row-start: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: stretch;
+  padding: 0 0.5rem;
 }
 
+.linkedin,
+.github,
 .mail {
-    grid-column: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 2;
+  grid-column: auto;
+  grid-row: auto;
 }
 
 @media (max-width: 900px) {
@@ -349,19 +307,94 @@ body.popup-open {
     gap: 1rem;
     height: auto;
     padding: 1.5rem 2rem;
+    text-align: center;
   }
 
-  .hero,
-  .cards,
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .site-nav {
+    justify-content: center;
   }
 
   .hero {
+    grid-template-columns: 1fr;
     padding: 3rem 2rem 2rem;
+    min-height: auto;
+  }
+
+  .hero-visual {
+    margin-top: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competences .parent {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    grid-template-columns: 1fr;
   }
 
   .section {
     padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 1rem 1rem;
+    align-items: flex-start;
+  }
+
+  .brand {
+    font-size: 1.75rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .eyebrow {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section h2 {
+    font-size: 2.3rem;
+  }
+
+  .project-card {
+    min-height: 100px;
+  }
+
+  .popup-content {
+    width: min(100%, 92vw);
+    padding: 1.5rem;
+  }
+
+  .popup-body h3 {
+    font-size: 1.5rem;
+  }
+
+  .popup-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section {
+    padding: 2rem 1rem;
   }
 }
