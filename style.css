@@ -316,6 +316,7 @@ body.popup-open {
 
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 800px;
   }
 
   .project-card {
@@ -329,6 +330,10 @@ body.popup-open {
 
   .contact-actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-actions .mail {
+    width: 150%;
   }
 }
 
@@ -372,11 +377,7 @@ body.popup-open {
   .project-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .project-card {
-    aspect-ratio: auto;
-    max-height: 350px;
+    max-width: 500px;
   }
 
   .competences .parent {
@@ -386,6 +387,10 @@ body.popup-open {
 
   .contact-actions {
     grid-template-columns: 1fr;
+  }
+
+  .contact-actions .mail {
+    width: auto;
   }
 
   .section {
@@ -475,8 +480,7 @@ body.popup-open {
     font-size: 1.5rem;
   }
 
-  .project-card {
-    aspect-ratio: auto;
-    max-height: 300px;
+  .project-grid {
+    max-width: 350px;
   }
 }
