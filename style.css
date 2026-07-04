@@ -126,8 +126,8 @@ a {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  max-width: 1280px;
+  gap: 2rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -142,6 +142,7 @@ a {
   overflow: hidden;
   aspect-ratio: 1 / 1;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 .project-card:hover {
   transform: scale(1.05);
@@ -153,10 +154,6 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-}
-
-.project-card {
-  cursor: pointer;
 }
 
 .popup {
@@ -235,16 +232,7 @@ body.popup-open {
 .competences .parent {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.competences .div1,
-.competences .div2,
-.competences .div3,
-.competences .div4,
-.competences .div5,
-.competences .div6 {
-  grid-column: span 1;
+  gap: 10rem;
 }
 
 .competences .div1,
@@ -264,12 +252,22 @@ body.popup-open {
   border-radius: 1.5rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+.contact-actions .mail {
+  width: 200%;
+}
 
+.contact-actions .linkedin:hover,
+.contact-actions .github:hover {
+  transform: scale(1.05);
+  transition:all 0.3s ease-in-out;
+}
 .formation {
   scroll-margin-top: 80px;
   background: #595959;
 }
-
+.formation h2 {
+  color: var(--white);
+}
 .section-text {
   max-width: 800px;
   margin: 0 auto;
@@ -293,25 +291,9 @@ body.popup-open {
   padding: 0 0.5rem;
 }
 
-.linkedin,
-.github,
-.mail {
-  grid-column: auto;
-  grid-row: auto;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .site-header {
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    height: auto;
-    padding: 1.5rem 2rem;
-    text-align: center;
-  }
-
-  .site-nav {
-    justify-content: center;
+    padding: 0 2rem;
   }
 
   .hero {
@@ -328,27 +310,37 @@ body.popup-open {
     font-size: 2.5rem;
   }
 
+  .section {
+    padding: 4rem 2rem;
+  }
+
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card {
+    aspect-ratio: 1 / 1;
   }
 
   .competences .parent {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
   }
 
   .contact-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 3rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 600px) {
+/* Mobiles */
+@media (max-width: 768px) {
   .site-header {
-    padding: 1rem 1rem;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    height: auto;
+    padding: 1.5rem 1rem;
+    text-align: center;
   }
 
   .brand {
@@ -356,6 +348,7 @@ body.popup-open {
   }
 
   .site-nav {
+    justify-content: center;
     gap: 1rem;
     font-size: 1rem;
   }
@@ -369,19 +362,38 @@ body.popup-open {
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .section h2 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-card {
-    min-height: 100px;
+    aspect-ratio: auto;
+    max-height: 350px;
+  }
+
+  .competences .parent {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
   }
 
   .popup-content {
-    width: min(100%, 92vw);
+    width: min(100%, 90vw);
     padding: 1.5rem;
   }
 
@@ -393,8 +405,78 @@ body.popup-open {
     width: 100%;
     text-align: center;
   }
+}
+
+/* Petits mobiles */
+@media (max-width: 480px) {
+  .site-header {
+    padding: 1rem 0.75rem;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .site-nav {
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .eyebrow {
+    font-size: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+    margin: 1rem 0;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
 
   .section {
     padding: 2rem 1rem;
+  }
+
+  .competences .div1,
+  .competences .div2,
+  .competences .div3,
+  .competences .div4,
+  .competences .div5,
+  .competences .div6,
+  .contact-actions .linkedin,
+  .contact-actions .github,
+  .contact-actions .mail {
+    font-size: 1.5rem;
+  }
+
+  .popup-content {
+    padding: 1rem;
+  }
+
+  .popup-body h3 {
+    font-size: 1.25rem;
+  }
+
+  .popup-body p {
+    font-size: 0.9rem;
+  }
+
+  .close-btn {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    aspect-ratio: auto;
+    max-height: 300px;
   }
 }
