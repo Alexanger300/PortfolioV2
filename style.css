@@ -253,8 +253,11 @@ body.popup-open {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .contact-actions .mail {
-  width: 200%;
+  grid-column: 1 / -1; /* de la première à la dernière colonne */
+  min-width: 0;
+  word-break: break-all;
 }
+
 
 .contact-actions .linkedin:hover,
 .contact-actions .github:hover {
@@ -333,7 +336,7 @@ body.popup-open {
   }
 
   .contact-actions .mail {
-    width: 150%;
+    width: 100%;
   }
 }
 
@@ -390,7 +393,7 @@ body.popup-open {
   }
 
   .contact-actions .mail {
-    width: auto;
+    width: 100%;
   }
 
   .section {
@@ -566,7 +569,7 @@ body.popup-open {
     gap: 1rem;
   }
   .contact-actions .mail {
-    width: auto;
+    width: 100%;
     font-size: 1rem;
   }
 }
