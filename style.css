@@ -565,4 +565,7 @@ body.popup-open {
     max-width: 300px;
     gap: 1rem;
   }
+  .contact-actions .mail {
+    width: auto;
+  }
 }
