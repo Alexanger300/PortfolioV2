@@ -485,3 +485,84 @@ body.popup-open {
     max-width: 350px;
   }
 }
+
+/* Très petits mobiles */
+@media (max-width: 360px) {
+  .site-header {
+    padding: 0.5rem 0.5rem;
+    gap: 0.2rem;
+  }
+
+  .brand {
+    font-size: 1.25rem;
+  }
+
+  .site-nav {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding: 1rem 0.75rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .eyebrow {
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+    margin: 0.75rem 0;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .competences .div1,
+  .competences .div2,
+  .competences .div3,
+  .competences .div4,
+  .competences .div5,
+  .competences .div6,
+  .contact-actions .linkedin,
+  .contact-actions .github,
+  .contact-actions .mail {
+    font-size: 1.25rem;
+  }
+
+  .popup-content {
+    padding: 0.75rem;
+  }
+
+  .popup-body h3 {
+    font-size: 1rem;
+  }
+
+  .popup-body p {
+    font-size: 0.8rem;
+  }
+
+  .popup-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .close-btn {
+    font-size: 1.25rem;
+  }
+
+  .project-grid {
+    max-width: 300px;
+    gap: 1rem;
+  }
+}
