@@ -1,106 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexandre Fatoux-Della Posta | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="brand">Alexandre Fatoux-Della Posta</div>
-      <nav class="site-nav" aria-label="Navigation principale">
-        <a href="#presentation">Présentation</a>
-        <a href="#projets">Mes Projets</a>
-        <a href="#competences">Compétences</a>
-        <a href="#formation">Formation</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alexandre Fatoux-Della Posta</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <main>
-      <section id="presentation" class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Présentation</p>
-          <h1>ALEXANDRE<br />FATOUX-DELLA POSTA</h1>
-          <p class="lead">
-            Etudiant en deuxième année en Bachelor chez Val d'europe Ynov Campus, A la recherche d'un stage en tant que développeur web.
-          </p>
-        </div>
-        <div class="hero-visual" aria-label="Photo de profil">
-          <img src="assets/image2.webp" alt="Photo de profil" class="photo">
-        </div>
-      </section>
+<header>
+  <div class="brand">Alexandre Fatoux-Della Posta</div>
+  <nav>
+    <a href="#presentation">Présentation</a><a href="#projets">Mes Projets</a><a href="#competences">Compétences</a><a href="#formation">Formation</a><a href="#contact">Contact</a>
+  </nav>
+</header>
 
-      <section id="projets" class="section projects">
-        <h2>Mes Projets</h2>
-        <div class="project-grid">
-          <article class="project-card div1" data-project="red" tabindex="0" role="button" aria-label="Voir les informations du projet RED">
-            <img src="assets/project1.png" alt="Projet 1" class="project-image" id="1" />
-          </article>
-          
-          <article class="project-card div3" data-project="calysta" tabindex="0" role="button" aria-label="Voir les informations du projet Calysta">
-            <img src="assets/project2.png" alt="Projet 2" class="project-image" id="2" />
-          </article>
-          <article class="project-card div4" data-project="groupie-tracker" tabindex="0" role="button" aria-label="Voir les informations du projet Groupie Tracker">
-            <img src="assets/project3.png" alt="Projet 3" class="project-image" id="3" />
-          </article>
-        </div>
-
-      </section>
-
-      <section id="competences" class="section competences">
-        <h2>Compétences</h2>
-  <div class="parent">
-      <div class="div1">Javascript</div>
-    <div class="div2">CSS</div>
-    <div class="div3">HTML</div>
-    <div class="div4">Python</div>
-    <div class="div5">SQL</div>
-    <div class="div6">Figma</div>
+<section id="presentation">
+  <h2>Présentation</h2>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>ALEXANDRE FATOUX-DELLA POSTA</h1>
+      <p>Lorem ipsum dolor sit amet consectetur. Et eu neque mauris dolor. Aliquam convallis cursus integer quisque nunc ultricies scelerisque nibh lobortis. Scelerisque nibh ultricies sapien pellentesque at sed dictum sed. Sed a quisque sit interdum.</p>
+    </div>
+    <div class="photo" role="img" aria-label="Photo d’Alexandre"><span>Photo</span></div>
   </div>
-    
-    
-      </section>
+</section>
 
-      <section id="formation" class="section formation">
-        <h2>Formation</h2>
-        <p class="section-text">
-          Bac Général, Lycée Simone Veil - 2024-2025
-        </p>
-        <p class="section-text">
-          Bachelor Informatique, Val d'Europe Ynov Campus - 2025-2026
-        </p>
-      </section>
+<section id="projets">
+  <h2>Mes Projets</h2>
+  <div class="stage" id="stage" aria-roledescription="carrousel"></div>
+  <div class="ctrl">
+    <button id="prev" aria-label="Projet précédent">‹</button>
+    <div class="dots" id="dots"></div>
+    <button id="next" aria-label="Projet suivant">›</button>
+  </div>
+</section>
 
-      <section id="contact" class="section contact">
-        <h2>Contact</h2>
-        <div class="contact-actions">
-    <a class="linkedin" href="https://www.linkedin.com/in/alexandre-fatoux-della-posta/">Linkedin</a>
-    <a class="github" href="https://github.com/Alexanger300">Github</a>
-    <a class="mail">alexandrefatouxdellaposta@gmail.com</a>
-        </div>
-      </section>
-    </main>
-    <section id="popup" class="popup" aria-hidden="true">
-      <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
-        <button id="close-btn" class="close-btn" type="button" aria-label="Fermer le popup">&times;</button>
-        <div class="popup-body">
-          <h3 id="popup-title"></h3>
-          <p id="popup-description"></p>
-          <p id="popup-technologies"></p>
-          <p id="popup-learned"></p>
-          <a id="popup-link" class="popup-link" href="#" target="_blank" rel="noopener noreferrer">Voir le Github</a>
-          <a id="popup-site" class="popup-link" href="#" target="_blank" rel="noopener noreferrer">Voir la video</a>
-        </div>
-      </div>
-    </section>
-    <script  type="module" src="project.js"></script>
-  </body>
+<section id="competences">
+  <h2>Compétences</h2>
+  <div class="chips">
+    <div class="chip">Javascript</div><div class="chip">CSS</div><div class="chip">Python</div>
+    <div class="chip">HTML</div><div class="chip">SQL</div><div class="chip">Figma</div>
+  </div>
+</section>
+
+<section id="formation">
+  <h2>Formation</h2>
+  <p>Lorem ipsum dolor sit amet consectetur.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="links">
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">Linkedin</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Github</a>
+    <a href="mailto:alexandrefatouxdellaposta@gmail.com">alexandrefatouxdellaposta@gmail.com</a>
+  </div>
+</section>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Fermer">×</button>
+    <h3 id="modal-title"></h3>
+    <div class="modal-media" id="modal-media"></div>
+    <p id="modal-desc"></p>
+    <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noopener" hidden>Voir le projet</a>
+  </div>
+</div>
+
+<script src="project.js"></script>
+</body>
 </html>

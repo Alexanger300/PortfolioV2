@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Projet 1",
+    "description": "Décris ici ton projet : contexte, technologies utilisées, ce que tu as appris.",
+    "image": "assets/projet1.jpg",
+    "video": "assets/projet1.mp4",
+    "link": "https://github.com/ton-compte/projet1",
+    "linkLabel": "Voir sur Github"
+  },
+  {
+    "title": "Projet 2",
+    "description": "Description du projet 2.",
+    "image": "assets/projet2.jpg",
+    "video": "https://www.youtube.com/watch?v=XXXXXXXXXXX",
+    "link": "https://exemple.com",
+    "linkLabel": "Voir le site"
+  },
+  {
+    "title": "Projet 3",
+    "description": "Description du projet 3. Les champs image, video et link sont facultatifs : laisse \"\" pour les ignorer.",
+    "image": "",
+    "video": "",
+    "link": "",
+    "linkLabel": ""
+  },
+  {
+    "title": "Projet 4",
+    "description": "Description du projet 4.",
+    "image": "",
+    "video": "",
+    "link": "",
+    "linkLabel": ""
+  },
+  {
+    "title": "Projet 5",
+    "description": "Description du projet 5.",
+    "image": "",
+    "video": "",
+    "link": "",
+    "linkLabel": ""
+  }
+]
