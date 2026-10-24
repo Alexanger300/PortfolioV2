@@ -133,3 +133,36 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') go(-1);
   if (e.key === 'ArrowRight') go(1);
 });
+
+
+/* ---------- Apparitions au scroll ---------- */
+(function () {
+  const plan = [
+    ['#presentation h2', 'up'],
+    ['.hero-text', 'left', .15],
+    ['.photo', 'right', .3],
+    ['#projets h2', 'up'],
+    ['#stage', 'zoom', .15],
+    ['.ctrl', 'up', .3],
+    ['#competences h2', 'up'],
+    ['.chip', 'up', .1, .12],       // [sélecteur, direction, délai de base, décalage entre éléments]
+    ['#formation h2', 'up'],
+    ['#formation p', 'up', .15],
+    ['#contact h2', 'up'],
+    ['.links a', 'up', .1, .15]
+  ];
+  const els = [];
+  plan.forEach(([sel, from, base = 0, step = 0]) => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      el.classList.add('reveal');
+      el.dataset.from = from;
+      el.style.setProperty('--delay', (base + i * step) + 's');
+      els.push(el);
+    });
+  });
+  if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .15, rootMargin: '0px 0px -6% 0px' });
+  els.forEach(el => io.observe(el));
+})();
