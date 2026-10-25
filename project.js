@@ -148,7 +148,7 @@ document.addEventListener('keydown', e => {
     ['.chip', 'up', .1, .12],       // [sélecteur, direction, délai de base, décalage entre éléments]
     ['#formation h2', 'up'],
     ['#formation p', 'up', .15],
-    ['#contact h2', 'up'],
+    ['#contact h2', 'uzp'],
     ['.links a', 'up', .1, .15]
   ];
   const els = [];
