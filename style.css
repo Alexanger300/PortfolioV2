@@ -24,7 +24,15 @@ nav a{opacity:.85;transition:opacity .2s}
 nav a:hover{opacity:1}
 
 /* Présentation */
-#presentation{background:var(--blue);padding:clamp(40px,6vw,150px) clamp(20px,12vw,430px) clamp(60px,6vw,150px)}
+#presentation{background:
+  radial-gradient(ellipse 42% 30% at 14% 30%,rgba(180,210,255,.2),transparent 75%),
+  radial-gradient(ellipse 36% 26% at 78% 24%,rgba(255,255,255,.13),transparent 75%),
+  radial-gradient(ellipse 48% 32% at 54% 76%,rgba(25,75,165,.28),transparent 75%),
+  var(--blue);position:relative;isolation:isolate;
+  padding:clamp(40px,6vw,150px) clamp(20px,12vw,430px) clamp(60px,6vw,150px)}
+#presentation::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:url("/assets/tokyo_night_city_neon.png") center/cover no-repeat;opacity:.65;
+  -webkit-mask-image:linear-gradient(to top,transparent 0%,#000 100%);mask-image:linear-gradient(to top,transparent 0%,#000 100%)}
 #presentation h2{margin-bottom:clamp(30px,4vw,100px)}
 .hero{display:flex;align-items:center;justify-content:space-between;gap:clamp(24px,4vw,100px);flex-wrap:wrap}
 .hero-text{flex:1 1 320px;max-width:731px}
@@ -62,7 +70,12 @@ nav a:hover{opacity:1}
 .dots button.on{opacity:1}
 
 /* Compétences */
-#competences{background:var(--blue);padding:clamp(30px,3vw,80px) 0 clamp(60px,6vw,150px)}
+#competences{background:
+  radial-gradient(ellipse 40% 34% at 82% 32%,rgba(180,210,255,.2),transparent 75%),
+  radial-gradient(ellipse 34% 28% at 20% 62%,rgba(255,255,255,.12),transparent 75%),
+  radial-gradient(ellipse 50% 30% at 58% 92%,rgba(25,75,165,.28),transparent 75%),
+  var(--blue);
+  padding:clamp(30px,3vw,80px) 0 clamp(60px,6vw,150px)}
 .chips{display:grid;grid-template-columns:repeat(3,minmax(0,334px));gap:clamp(12px,2.6vw,70px) clamp(12px,2.6vw,100px);
   justify-content:center;margin-top:clamp(30px,4vw,100px);padding:0 16px}
 .chip{background:var(--chip);border-radius:30px;box-shadow:0 4px 4px rgba(0,0,0,.25);aspect-ratio:334/127;
