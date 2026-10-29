@@ -1,7 +1,7 @@
 [
   {
     "title": "Calysta",
-    "description": "Un projet étudiant qui consistait à instaurer des salles de repos dans les établissements scolaire,en tant que developpeur ,mon ojectif était de créer un site web qui présentait le projet et l'équipe",
+    "description": "Un projet étudiant qui consistait à instaurer des salles de repos dans les établissements scolaire, en tant que developpeur , mon ojectif était de créer un site web qui présentait le projet et l'équipe",
     "image": "./assets/project2.png",
     "video": "",
     "link": "https://calysta-vitrine.vercel.app",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Projet RED",
-    "description": "Un projet qui avait pour but de créer un jeu tour par tour en Golang,je me suis occupé de tout ce qui est visuel",
+    "description": "Un projet qui avait pour but de créer un jeu tour par tour en Golang, je me suis occupé de tout ce qui est visuel",
     "image": "./assets/project1.png",
     "video": "./assets/videos/ProjetRED.mp4",
     "link": "https://github.com/Alexanger300/projet-red_Arden",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Groupie Tracker",
-    "description": "Ce projet a pour but de creer un site qui utilise une API regroupant des artistes de tt sortes,mon rôle durant ce projet était de faire le visuel du site",
+    "description": "Ce projet a pour but de creer un site qui utilise une API regroupant des artistes de tt sortes, mon rôle durant ce projet était de faire le visuel du site",
     "image": "./assets/project3.png",
     "video": "./assets/videos/Présentation-Groupie-Tracker.mp4",
     "link": "https://github.com/333-m93/groupie-tracker",

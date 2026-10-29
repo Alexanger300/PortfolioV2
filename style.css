@@ -1,6 +1,6 @@
 :root{
   --dark:#132634; --panel:#1A3144; --blue:#3F51B5; --chip:#1E1E1E; --white:#fff;
-  --h2:clamp(34px,2.35vw + 14px,60px);
+  --h2:clamp(12px,2.35vw + 14px,30px);
   --txt:clamp(16px,.7vw + 4px,22px);
   --chipfs:clamp(20px,1.9vw,48px);
   box-sizing:border-box;
@@ -69,8 +69,8 @@ nav a:hover{opacity:1}
 .dots button{width:12px;height:12px;border-radius:50%;background:#fff;opacity:.3;box-shadow:none}
 .dots button.on{opacity:1}
 
-/* Compétences */
-#competences{background:
+/* Compétences  & Technologies*/
+#competences , #Technologies , #Interet{background:
   radial-gradient(ellipse 40% 34% at 82% 32%,rgba(180,210,255,.2),transparent 75%),
   radial-gradient(ellipse 34% 28% at 20% 62%,rgba(255,255,255,.12),transparent 75%),
   radial-gradient(ellipse 50% 30% at 58% 92%,rgba(25,75,165,.28),transparent 75%),
@@ -80,10 +80,13 @@ nav a:hover{opacity:1}
   justify-content:center;margin-top:clamp(30px,4vw,100px);padding:0 16px}
 .chip{background:var(--chip);border-radius:30px;box-shadow:0 4px 4px rgba(0,0,0,.25);aspect-ratio:334/127;
   display:grid;place-items:center;font-size:var(--chipfs)}
-
+#Technologie h2{
+  margin-top:30px
+}
 /* Formation */
-#formation{background:linear-gradient(0deg,var(--dark) 70.19%,var(--blue) 100%);padding:clamp(60px,6vw,160px) clamp(20px,2vw,43px) clamp(80px,8vw,200px)}
+#formation ,#Experience{background:linear-gradient(0deg,var(--dark) 70.19%,var(--blue) 100%);padding:clamp(60px,6vw,160px) clamp(20px,2vw,43px) clamp(80px,8vw,200px)}
 #formation p{margin-top:clamp(30px,4vw,100px);font-size:var(--h2);line-height:1.2}
+#Experience p{margin-top:clamp(30px,4vw,100px);font-size:var(--h2);line-height:1.2}
 
 /* Contact */
 #contact{background:var(--dark);padding:clamp(40px,3vw,80px) 16px clamp(60px,5vw,130px)}
